@@ -1,0 +1,33 @@
+
+CFLAGS	= -Wall -Wextra -Werror
+RM = rm -f
+CC = cc
+
+NAME	= libft.a
+
+SOURCES =	ft_ascii.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isdigit.c ft_isprint.c ft_memset.c ft_strchr.c ft_strdup.c ft_strlcat.c 
+			ft_strlcpy.c ft_strlen.c ft_strncmp.c ft_strnstr.c ft_strrchr.c ft_tolower.c ft_toupper.c
+
+OBJECTS	= ${SOURCES:.c=.o}
+
+INCLUDES	= libft.h
+
+%.o : %.c
+	$(CC) ${CFLAGS} -c $< -o $@
+
+${NAME}: ${OBJECTS}
+	ar rcs ${NAME} ${OBJECTS}
+	echo "$(COLOUR_RED)Libft compiled successfully!$(COLOUR_END)"
+
+all: ${NAME}
+
+clean:
+	${RM} ${OBJECTS}
+	
+
+fclean: clean
+	${RM} ${NAME}
+	echo "$(COLOUR_RED)Libft cleaned successfully!$(COLOUR_END)"
+
+re: fclean all
+
