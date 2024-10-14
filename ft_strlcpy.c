@@ -6,11 +6,11 @@
 /*   By: cbauer < cbauer@student.42heilbronn.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 11:21:44 by cbauer            #+#    #+#             */
-/*   Updated: 2024/10/11 12:42:06 by cbauer           ###   ########.fr       */
+/*   Updated: 2024/10/14 15:06:15 by cbauer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+static int	ft_strlen(char *str)
 {
 	int	counter;
 
@@ -38,7 +38,7 @@ unsigned int	ft_strlcpy(char *src, char *dest, unsigned int len)
 	return (ft_strlen(src) + ft_strlen(dest));
 }
 
-#include <stdio.h>
+// #include <stdio.h>
 
 // int main()
 // {
