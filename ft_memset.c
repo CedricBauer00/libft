@@ -6,9 +6,11 @@
 /*   By: cbauer < cbauer@student.42heilbronn.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 12:13:36 by cbauer            #+#    #+#             */
-/*   Updated: 2024/10/11 12:08:19 by cbauer           ###   ########.fr       */
+/*   Updated: 2024/10/15 14:00:29 by cbauer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_memset(void *b, int c, size_t len)
 {

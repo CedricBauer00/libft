@@ -1,40 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbauer < cbauer@student.42heilbronn.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 12:08:03 by cbauer            #+#    #+#             */
-/*   Updated: 2024/10/15 17:30:20 by cbauer           ###   ########.fr       */
+/*   Created: 2024/10/15 10:47:18 by cbauer            #+#    #+#             */
+/*   Updated: 2024/10/15 12:41:32 by cbauer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+int	ft_atoi(const char *str)
 {
-	unsigned int counter;
-	unsigned int i;
+	int	counter;
+	int	minus;
+	int	num;
 
 	counter = 0;
-	i = 0;
-
-	while (dst[counter] != '\0')
+	while (str[counter] != '\0' && ((str[counter] >= '\t'
+				&& str[counter] <= '\r') || str[counter] == ' '))
 		counter++;
-	while(src[i] != '\0' && i < dstsize)
+	if (str[counter] == '-')
 	{
-		dst[counter + i] = src[i];
-		i++;
+		minus = 1;
+		counter++;
 	}
-	return (*src + *dst);
+	num = 0;
+	while (str[counter] >= '0' && str[counter] <= '9')
+	{
+		num = (str[counter] - '0') + num * 10;
+		counter++;
+	}
+	if (minus == 1)
+		num = -num;
+	return (num);
 }
 
 // int main()
 // {
-// 	char src[] = "ASD";
-// 	char dest[] = "asd";
-	
-// 	printf("%d\n", ft_strlcat(src, dest, 10));
+// 	char str[] = "-2147483649";
+// 	printf("%d\n", ft_atoi(str));
+// 	printf("%d\n", atoi(str));
 // 	return (0);
 // }

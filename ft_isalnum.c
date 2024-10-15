@@ -6,25 +6,13 @@
 /*   By: cbauer < cbauer@student.42heilbronn.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 10:58:09 by cbauer            #+#    #+#             */
-/*   Updated: 2024/10/14 15:04:44 by cbauer           ###   ########.fr       */
+/*   Updated: 2024/10/15 19:51:34 by cbauer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_isdigit(int c)
-{
-	if (c >= 0 && c <= 9)
-		return (1);
-	return (0);
-}
 
-static int	ft_isalpha(int letter)
-{
-	if ((letter >= 'A' && letter <= 'Z') || (letter >= 'a' && letter <= 'z'))
-		return (1);
-	return (0);
-}
 
 int	ft_isalnum(int c)
 {

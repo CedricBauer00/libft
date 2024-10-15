@@ -6,13 +6,13 @@
 /*   By: cbauer < cbauer@student.42heilbronn.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 11:15:31 by cbauer            #+#    #+#             */
-/*   Updated: 2024/10/09 15:14:51 by cbauer           ###   ########.fr       */
+/*   Updated: 2024/10/15 16:55:37 by cbauer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(char *str)
+size_t	ft_strlen(const char *str)
 {
 	int	counter;
 

@@ -6,7 +6,7 @@
 /*   By: cbauer < cbauer@student.42heilbronn.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 13:27:24 by cbauer            #+#    #+#             */
-/*   Updated: 2024/10/10 12:41:33 by cbauer           ###   ########.fr       */
+/*   Updated: 2024/10/15 14:03:47 by cbauer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,13 +81,13 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 }
 
 
-int main()
-{
-	char haystack[17] = "fffffFoo Bar Baz";
-	char needle[50] = "Foo Bar";
+// int main()
+// {
+// 	char haystack[17] = "fffffFoo Bar Baz";
+// 	char needle[50] = "Foo Bar";
 	
-	printf("%s\n", ft_strnstr(haystack, needle, 15));
-	printf("%s\n", strnstr(haystack, needle, 15));
+// 	printf("%s\n", ft_strnstr(haystack, needle, 15));
+// 	printf("%s\n", strnstr(haystack, needle, 15));
 
-	return (0);
-}
+// 	return (0);
+// }

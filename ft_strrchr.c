@@ -3,44 +3,42 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cbauer <cbauer@student.42.fr>              +#+  +:+       +#+        */
+/*   By: cbauer < cbauer@student.42heilbronn.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 14:04:15 by cbauer            #+#    #+#             */
-/*   Updated: 2024/10/08 15:51:45 by cbauer           ###   ########.fr       */
+/*   Updated: 2024/10/15 15:23:14 by cbauer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
 
-char	*strchr(const char *str, int c)
+char	*ft_strrchr(const char *str, int c)
 {
-	int	counter;
-	int i = 0;
+	size_t	counter;
+	char	*i;
 
+	i = NULL;
 	counter = 0;
+
 	while (str[counter] != '\0')
 	{
-		if (str[counter] == c)
-			i = counter;
+		if (str[counter] == (char)c)
+			i = (char *)(str + counter);
 		counter++;
 	}
-	// while (counter >= 0)
-	// {
-	// 	counter--;
-	// }
-	if (i == 0)
-		return NULL;
-	return ((char *)(str + i));
+	if (c == '\0')
+		return ((char *)(str + counter));
+	return (i);
 }
 
-/* int main()
+int main()
 {
-	char *test = ft_strchr("hello", 'l');
+	char *test = "hello worl";
 
-	printf("%s\n", test);
-
+	printf("%s\n", ft_strrchr(test, 'l'));
 	
-} */
+	return 0;
+}
 
 

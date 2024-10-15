@@ -6,36 +6,26 @@
 /*   By: cbauer < cbauer@student.42heilbronn.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 11:21:44 by cbauer            #+#    #+#             */
-/*   Updated: 2024/10/14 15:06:15 by cbauer           ###   ########.fr       */
+/*   Updated: 2024/10/15 19:51:58 by cbauer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static int	ft_strlen(char *str)
-{
-	int	counter;
+#include "libft.h"
 
-	counter = 0;
-	while (str[counter] != '\0')
-	{
-		counter++;
-	}
-	return (counter);
-}
-
-unsigned int	ft_strlcpy(char *src, char *dest, unsigned int len)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	unsigned int	counter;
 
 	counter = 0;
-	if (len == 0)
+	if (dstsize == 0)
 		return (ft_strlen(src));
-	while (counter + 1 < len && src[counter])
+	while (counter + 1 < dstsize && src[counter])
 	{
-		dest[counter] = src[counter];
+		dst[counter] = src[counter];
 		counter++;
 	}
-	dest[counter] = '\0';
-	return (ft_strlen(src) + ft_strlen(dest));
+	dst[counter] = '\0';
+	return (ft_strlen(src) + ft_strlen(dst));
 }
 
 // #include <stdio.h>
@@ -53,12 +43,12 @@ unsigned int	ft_strlcpy(char *src, char *dest, unsigned int len)
 // 	printf("%s\n", dest);
 // }
 
-int main()
-{
-	char src[] = "isws";
-	char dest[] = "127";
+// int main()
+// {
+// 	char src[] = "isws";
+// 	char dest[] = "127";
 
-	printf("%d\n", ft_strlcpy(src, dest, 13));
-	printf("%s\n", dest);
-	return (0);
-}
+// 	printf("%d\n", ft_strlcpy(src, dest, 13));
+// 	printf("%s\n", dest);
+// 	return (0);
+// }
