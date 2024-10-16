@@ -6,7 +6,7 @@
 /*   By: cbauer < cbauer@student.42heilbronn.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 20:38:53 by cbauer            #+#    #+#             */
-/*   Updated: 2024/10/15 16:47:42 by cbauer           ###   ########.fr       */
+/*   Updated: 2024/10/16 13:29:39 by cbauer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	{
 		if (string[counter] == (unsigned char)c)
 		{
-			return (&string[counter]);
+			return ((void *)(&string[counter]));
 		}
 		counter++;
 	}

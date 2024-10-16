@@ -6,12 +6,11 @@
 /*   By: cbauer < cbauer@student.42heilbronn.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 14:04:15 by cbauer            #+#    #+#             */
-/*   Updated: 2024/10/15 15:23:14 by cbauer           ###   ########.fr       */
+/*   Updated: 2024/10/16 13:32:15 by cbauer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
 
 char	*ft_strrchr(const char *str, int c)
 {
@@ -20,6 +19,7 @@ char	*ft_strrchr(const char *str, int c)
 
 	i = NULL;
 	counter = 0;
+
 
 	while (str[counter] != '\0')
 	{
@@ -32,13 +32,13 @@ char	*ft_strrchr(const char *str, int c)
 	return (i);
 }
 
-int main()
-{
-	char *test = "hello worl";
+// int main()
+// {
+// 	char *test = "hello worl";
 
-	printf("%s\n", ft_strrchr(test, 'l'));
+// 	printf("%s\n", ft_strrchr(test, 'l'));
 	
-	return 0;
-}
+// 	return 0;
+// }
 
 

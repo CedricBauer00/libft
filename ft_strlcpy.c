@@ -6,7 +6,7 @@
 /*   By: cbauer < cbauer@student.42heilbronn.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 11:21:44 by cbauer            #+#    #+#             */
-/*   Updated: 2024/10/15 19:51:58 by cbauer           ###   ########.fr       */
+/*   Updated: 2024/10/16 09:05:30 by cbauer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,22 +25,27 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 		counter++;
 	}
 	dst[counter] = '\0';
-	return (ft_strlen(src) + ft_strlen(dst));
+	return (ft_strlen(src));
 }
 
 // #include <stdio.h>
 
 // int main()
 // {
-// 	char src[] = "abcde";
-// 	char dest[] = "hahahah";
-// 	char test[] = "hahahah";
+// 	char *dest;
+// 	printf("%d\n", ft_strlcpy(dest, "lorem", 15));
+//     write(1, "\n", 1);
+//     write(1, dest, 15);
+// 	return (0);
+// // 	char src[] = "abcde";
+// // 	char dest[] = "hahahah";
+// // 	char test[] = "hahahah";
 
-// 	int len; 
+// // 	int len; 
 
-// 	len = 10;
-// 	printf("%d\n", ft_strlcpy(src, dest, len));
-// 	printf("%s\n", dest);
+// // 	len = 10;
+// // 	printf("%d\n", ft_strlcpy(src, dest, len));
+// // 	printf("%s\n", dest);
 // }
 
 // int main()

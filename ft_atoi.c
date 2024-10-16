@@ -6,7 +6,7 @@
 /*   By: cbauer < cbauer@student.42heilbronn.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 10:47:18 by cbauer            #+#    #+#             */
-/*   Updated: 2024/10/15 12:41:32 by cbauer           ###   ########.fr       */
+/*   Updated: 2024/10/16 13:54:01 by cbauer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ int	ft_atoi(const char *str)
 		minus = 1;
 		counter++;
 	}
+	else if (str[counter] == '+')
+			counter++;
 	num = 0;
 	while (str[counter] >= '0' && str[counter] <= '9')
 	{
@@ -40,7 +42,7 @@ int	ft_atoi(const char *str)
 
 // int main()
 // {
-// 	char str[] = "-2147483649";
+// 	char str[] = "   -+548";
 // 	printf("%d\n", ft_atoi(str));
 // 	printf("%d\n", atoi(str));
 // 	return (0);
