@@ -1,34 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbauer < cbauer@student.42heilbronn.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 13:58:21 by cbauer            #+#    #+#             */
-/*   Updated: 2024/10/16 20:44:04 by cbauer           ###   ########.fr       */
+/*   Created: 2024/10/17 19:01:51 by cbauer            #+#    #+#             */
+/*   Updated: 2024/10/17 19:10:07 by cbauer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *str)
+void	ft_putstr_fd(char *s, int fd)
 {
-	size_t	len;
-	size_t	counter;
+	int	counter;
 
-	// if (!str)
-	// 	return (0);
-	len = ft_strlen(str);
-	char	*ptr = malloc(len * sizeof(char) + 1);
-	if (!ptr)
-		return (NULL);
 	counter = 0;
-	while (str[counter] != '\0')
+	while (s[counter])
 	{
-		ptr[counter] = str[counter];
+		write(fd, &s[counter], 1);
 		counter++;
 	}
-	ptr[counter] = '\0';
-	return (ptr);
+	write(fd, "\n", 1);
 }
+
+// int main()
+// {
+// 	ft_putstr_fd("asdasdasd", 0);
+// 	return (0);
+// }

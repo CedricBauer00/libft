@@ -1,34 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbauer < cbauer@student.42heilbronn.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 13:58:21 by cbauer            #+#    #+#             */
-/*   Updated: 2024/10/16 20:44:04 by cbauer           ###   ########.fr       */
+/*   Created: 2024/10/17 18:50:21 by cbauer            #+#    #+#             */
+/*   Updated: 2024/10/17 18:58:27 by cbauer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *str)
+void	ft_putchar_fd(char c, int fd)
 {
-	size_t	len;
-	size_t	counter;
-
-	// if (!str)
-	// 	return (0);
-	len = ft_strlen(str);
-	char	*ptr = malloc(len * sizeof(char) + 1);
-	if (!ptr)
-		return (NULL);
-	counter = 0;
-	while (str[counter] != '\0')
-	{
-		ptr[counter] = str[counter];
-		counter++;
-	}
-	ptr[counter] = '\0';
-	return (ptr);
+	write(fd, &c, 1);
 }
+
+// int main()
+// {
+// 	ft_putchar_fd('c', 0);
+// 	return (0);
+// }

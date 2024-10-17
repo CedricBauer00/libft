@@ -1,34 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_test.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbauer < cbauer@student.42heilbronn.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 13:58:21 by cbauer            #+#    #+#             */
-/*   Updated: 2024/10/16 20:44:04 by cbauer           ###   ########.fr       */
+/*   Created: 2024/10/17 17:00:27 by cbauer            #+#    #+#             */
+/*   Updated: 2024/10/17 17:06:46 by cbauer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *str)
+char	*ft_test(char *s1, const char set)
 {
-	size_t	len;
 	size_t	counter;
-
-	// if (!str)
-	// 	return (0);
-	len = ft_strlen(str);
-	char	*ptr = malloc(len * sizeof(char) + 1);
-	if (!ptr)
-		return (NULL);
+	
 	counter = 0;
-	while (str[counter] != '\0')
+	while (s1[counter] != '\0')
 	{
-		ptr[counter] = str[counter];
+		if (s1[counter] == set)
+		{
+			s1[counter] = 0;
+		}
 		counter++;
 	}
-	ptr[counter] = '\0';
-	return (ptr);
+	return (s1);
+}
+
+int main()
+{
+	char s1[] = "adadadadad";
+	printf("%s\n", ft_test(s1, 'a'));
+	return (0);
 }

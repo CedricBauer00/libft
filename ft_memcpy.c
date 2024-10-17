@@ -6,7 +6,7 @@
 /*   By: cbauer < cbauer@student.42heilbronn.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 15:43:43 by cbauer            #+#    #+#             */
-/*   Updated: 2024/10/11 11:33:37 by cbauer           ###   ########.fr       */
+/*   Updated: 2024/10/16 17:34:38 by cbauer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	source = (const unsigned char *)src;
 	buffer = (unsigned char *)dst;
 	counter = 0;
+	if (dst == 0 && src == 0)
+		return (0);
 	while (counter < n)
 	{
 		buffer[counter] = source[counter];

@@ -6,13 +6,13 @@
 /*   By: cbauer < cbauer@student.42heilbronn.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 10:57:10 by cbauer            #+#    #+#             */
-/*   Updated: 2024/10/10 11:17:25 by cbauer           ###   ########.fr       */
+/*   Updated: 2024/10/16 20:52:12 by cbauer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	ft_toupper(char c)
+int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
 		c = c - 32;

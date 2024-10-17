@@ -1,34 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbauer < cbauer@student.42heilbronn.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 13:58:21 by cbauer            #+#    #+#             */
-/*   Updated: 2024/10/16 20:44:04 by cbauer           ###   ########.fr       */
+/*   Created: 2024/10/17 19:14:52 by cbauer            #+#    #+#             */
+/*   Updated: 2024/10/17 19:46:23 by cbauer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char	*ft_strdup(const char *str)
+void	ft_putnbr_fd(int n, int fd)
 {
-	size_t	len;
-	size_t	counter;
-
-	// if (!str)
-	// 	return (0);
-	len = ft_strlen(str);
-	char	*ptr = malloc(len * sizeof(char) + 1);
-	if (!ptr)
-		return (NULL);
-	counter = 0;
-	while (str[counter] != '\0')
+	int	res;
+	
+	res = 0;
+	if (n == 0)
+		return (0);
+	if (n == -2147483648)
+		return (-2147483648);
+	if (n > 10)
 	{
-		ptr[counter] = str[counter];
-		counter++;
+		n / 10 = res;
+		res 
 	}
-	ptr[counter] = '\0';
-	return (ptr);
+	write(fd, &res, 1);
 }

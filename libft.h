@@ -6,7 +6,7 @@
 /*   By: cbauer < cbauer@student.42heilbronn.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 15:16:35 by cbauer            #+#    #+#             */
-/*   Updated: 2024/10/16 13:31:24 by cbauer           ###   ########.fr       */
+/*   Updated: 2024/10/17 19:10:18 by cbauer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,14 @@ size_t	ft_strlen(const char *str);
 int		ft_strncmp(const char *src, const char *dest, size_t n);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_strrchr(const char *str, int c);
-char	ft_tolower(char c);
-char	ft_toupper(char c);
-
-
+int		ft_tolower(int c);
+int		ft_toupper(int c);
+void	*ft_calloc(size_t count, size_t size);
+char	*ft_strdup(const char *str);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s1, char const *set);
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *s, int fd);
 
 #endif

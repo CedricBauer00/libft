@@ -6,7 +6,7 @@
 /*   By: cbauer < cbauer@student.42heilbronn.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 13:30:30 by cbauer            #+#    #+#             */
-/*   Updated: 2024/10/11 12:39:39 by cbauer           ###   ########.fr       */
+/*   Updated: 2024/10/16 17:28:45 by cbauer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,18 +17,27 @@ int	ft_strncmp(const char *src, const char *dest, size_t n)
 	size_t	counter;
 
 	counter = 0;
-	while ((counter < n) && (src[counter] == dest[counter])
-		&& src[counter] != '\0' && dest[counter] != '\0')
+	if (n == 0)
+		return (0);
+	while ((counter < n) && !(src[counter] == '\0' && dest[counter] == '\0'))
 	{
+		if ((unsigned char)src[counter] != (unsigned char)dest[counter])
+			return ((unsigned char)src[counter] - (unsigned char)dest[counter]);
 		counter++;
 	}
-	return (src[counter] - dest[counter]);
+	return (0);
 }
 
 // int main()
 // {
-// 	char src[] = "A123";
-// 	char dest[] = "A";
-// 	printf("%d\n", ft_strncmp(src, dest, 11));
+// 	char src[] = "";
+// 	char dest[] = "";
+// 	printf("%d\n", ft_strncmp(src, dest, 1));
+// 	printf("%d\n", strncmp(src, dest, 3));
 // 	return (0);
 // }
+
+
+
+// // // "asdde"
+// // // "asdd"
