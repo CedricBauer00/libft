@@ -1,24 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strduptest.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbauer < cbauer@student.42heilbronn.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/17 11:49:34 by cbauer            #+#    #+#             */
-/*   Updated: 2024/10/18 14:35:30 by cbauer           ###   ########.fr       */
+/*   Created: 2024/10/18 11:00:28 by cbauer            #+#    #+#             */
+/*   Updated: 2024/10/18 15:13:48 by cbauer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "libft.h"
+#include "libft.h"
 
-// char	*strduptest(const char *s1)
+void	ft_putendl_fd(char *s, int fd)
+{
+	int	counter;
+
+	counter = 0;
+	while (s[counter] != '\0')
+	{
+		write(fd, &s[counter], 1);
+		counter++;
+	}
+	write(fd, "\n", 1);
+}
+// int main()
 // {
-// size_t	*str;
-// size_t	len;
-
-// len = strlen(s1);
-// 	str = (char *)malloc(len * sizeof(char) + 1);
-// 	if (!ptr)
-// 		return (0);
+// 	ft_putendl_fd("asdasdasd", 1);
+// 	return (0);
 // }

@@ -6,7 +6,7 @@
 /*   By: cbauer < cbauer@student.42heilbronn.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 13:30:30 by cbauer            #+#    #+#             */
-/*   Updated: 2024/10/16 17:28:45 by cbauer           ###   ########.fr       */
+/*   Updated: 2024/10/18 14:55:44 by cbauer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,3 @@ int	ft_strncmp(const char *src, const char *dest, size_t n)
 // 	printf("%d\n", strncmp(src, dest, 3));
 // 	return (0);
 // }
-
-
-
-// // // "asdde"
-// // // "asdd"

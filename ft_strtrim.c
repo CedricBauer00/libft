@@ -6,7 +6,7 @@
 /*   By: cbauer < cbauer@student.42heilbronn.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 16:28:48 by cbauer            #+#    #+#             */
-/*   Updated: 2024/10/17 19:00:12 by cbauer           ###   ########.fr       */
+/*   Updated: 2024/10/18 14:52:01 by cbauer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,19 @@ char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	counter;
 	size_t	i;
-	
+
 	counter = 0;
 	while (s1[counter])
 	{
 		if (ft_strchr(set, s1[counter]) == NULL)
-			break;
+			break ;
 		counter++;
 	}
 	i = ft_strlen(s1);
 	while (i > counter)
 	{
 		if (ft_strchr(set, s1[i]) == NULL)
-			break;
+			break ;
 		i--;
 	}
 	return (ft_substr(s1, counter, i - counter + 1));

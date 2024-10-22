@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strduptest.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbauer < cbauer@student.42heilbronn.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/17 11:49:34 by cbauer            #+#    #+#             */
-/*   Updated: 2024/10/18 14:35:30 by cbauer           ###   ########.fr       */
+/*   Created: 2024/10/18 11:11:04 by cbauer            #+#    #+#             */
+/*   Updated: 2024/10/18 15:08:06 by cbauer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "libft.h"
+#include "libft.h"
 
-// char	*strduptest(const char *s1)
-// {
-// size_t	*str;
-// size_t	len;
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+{
+	unsigned int	counter;
 
-// len = strlen(s1);
-// 	str = (char *)malloc(len * sizeof(char) + 1);
-// 	if (!ptr)
-// 		return (0);
-// }
+	counter = 0;
+	if (!s || *f == 0)
+		return ;
+	while (s[counter] != '\0')
+	{
+		f(counter, &s[counter]);
+		counter++;
+	}
+}

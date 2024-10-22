@@ -6,7 +6,7 @@
 /*   By: cbauer < cbauer@student.42heilbronn.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 13:58:21 by cbauer            #+#    #+#             */
-/*   Updated: 2024/10/16 20:44:04 by cbauer           ###   ########.fr       */
+/*   Updated: 2024/10/21 17:56:54 by cbauer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,10 @@ char	*ft_strdup(const char *str)
 {
 	size_t	len;
 	size_t	counter;
+	char	*ptr;
 
-	// if (!str)
-	// 	return (0);
 	len = ft_strlen(str);
-	char	*ptr = malloc(len * sizeof(char) + 1);
+	ptr = malloc(len * sizeof(char) + 1);
 	if (!ptr)
 		return (NULL);
 	counter = 0;
@@ -32,3 +31,4 @@ char	*ft_strdup(const char *str)
 	ptr[counter] = '\0';
 	return (ptr);
 }
+	

@@ -1,24 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strduptest.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbauer < cbauer@student.42heilbronn.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/17 11:49:34 by cbauer            #+#    #+#             */
-/*   Updated: 2024/10/18 14:35:30 by cbauer           ###   ########.fr       */
+/*   Created: 2024/10/18 11:47:49 by cbauer            #+#    #+#             */
+/*   Updated: 2024/10/18 15:37:36 by cbauer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "libft.h"
+#include "libft.h"
 
-// char	*strduptest(const char *s1)
-// {
-// size_t	*str;
-// size_t	len;
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+{
+	unsigned int	counter;
+	size_t			len;
+	char			*newstr;
 
-// len = strlen(s1);
-// 	str = (char *)malloc(len * sizeof(char) + 1);
-// 	if (!ptr)
-// 		return (0);
-// }
+	len = ft_strlen(s);
+	newstr = (char *)malloc((len + 1) * sizeof(char));
+	if (!newstr)
+		return (NULL);
+	counter = 0;
+	while (s[counter] != '\0')
+	{
+		newstr[counter] = f(counter, s[counter]);
+		counter++;
+	}
+	newstr[counter] = '\0';
+	return (newstr);
+}

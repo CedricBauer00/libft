@@ -6,7 +6,7 @@
 /*   By: cbauer < cbauer@student.42heilbronn.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 17:47:55 by cbauer            #+#    #+#             */
-/*   Updated: 2024/10/17 15:01:36 by cbauer           ###   ########.fr       */
+/*   Updated: 2024/10/18 15:28:54 by cbauer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,20 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	int *ptr = malloc(count * size);
+	int	*ptr;
+
+	ptr = malloc(count * size);
 	if (!ptr)
 		return (NULL);
-	ft_bzero(ptr, count *size);
+	ft_bzero(ptr, count * size);
 	return (ptr);
 }
+
 // int main() {
 //     // Allocate memory for an array of 5 integers
 //     // int *arr = (int *)ft_calloc(0, sizeof(int));
 //     int *arr = calloc(0, sizeof(int));
-	
+
 //     if (arr == NULL) {
 //         printf("Memory allocation failed\n");
 //         return 1;

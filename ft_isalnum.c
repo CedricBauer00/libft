@@ -6,13 +6,11 @@
 /*   By: cbauer < cbauer@student.42heilbronn.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 10:58:09 by cbauer            #+#    #+#             */
-/*   Updated: 2024/10/15 19:51:34 by cbauer           ###   ########.fr       */
+/*   Updated: 2024/10/18 15:14:31 by cbauer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-
 
 int	ft_isalnum(int c)
 {

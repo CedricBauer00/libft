@@ -6,7 +6,7 @@
 /*   By: cbauer < cbauer@student.42heilbronn.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 14:04:15 by cbauer            #+#    #+#             */
-/*   Updated: 2024/10/16 13:32:15 by cbauer           ###   ########.fr       */
+/*   Updated: 2024/10/18 14:54:40 by cbauer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ char	*ft_strrchr(const char *str, int c)
 
 	i = NULL;
 	counter = 0;
-
-
 	while (str[counter] != '\0')
 	{
 		if (str[counter] == (char)c)
@@ -37,8 +35,6 @@ char	*ft_strrchr(const char *str, int c)
 // 	char *test = "hello worl";
 
 // 	printf("%s\n", ft_strrchr(test, 'l'));
-	
+
 // 	return 0;
 // }
-
-

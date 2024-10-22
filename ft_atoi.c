@@ -6,7 +6,7 @@
 /*   By: cbauer < cbauer@student.42heilbronn.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 10:47:18 by cbauer            #+#    #+#             */
-/*   Updated: 2024/10/16 13:54:01 by cbauer           ###   ########.fr       */
+/*   Updated: 2024/10/18 15:16:56 by cbauer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	ft_atoi(const char *str)
 		counter++;
 	}
 	else if (str[counter] == '+')
-			counter++;
+		counter++;
 	num = 0;
 	while (str[counter] >= '0' && str[counter] <= '9')
 	{

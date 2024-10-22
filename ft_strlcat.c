@@ -6,7 +6,7 @@
 /*   By: cbauer < cbauer@student.42heilbronn.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 12:08:03 by cbauer            #+#    #+#             */
-/*   Updated: 2024/10/16 15:18:49 by cbauer           ###   ########.fr       */
+/*   Updated: 2024/10/18 15:06:29 by cbauer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,9 @@
 
 // 	counter = 0;
 // 	i = 0;
-
 // 	while (dst[counter] != '\0')
 // 		counter++;
-// 	while(src[i] != '\0' && i < dstsize)
+// 	while (src[i] != '\0' && i < dstsize)
 // 	{
 // 		dst[counter + i] = src[i];
 // 		i++;
@@ -31,30 +30,17 @@
 // 	return (ft_strlen(dst) + ft_strlen(src));
 // }
 
-
-// size_t	ft_strlen(const char *str)
-// {
-// 	int	counter;
-
-// 	counter = 0;
-// 	while (str[counter] != '\0')
-// 		counter++;
-// 	return (counter);
-// }
-
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	counter;
 	size_t	i;
 	size_t	dst_len;
 	size_t	src_len;
-	
+
 	dst_len = ft_strlen(dst);
 	src_len = ft_strlen(src);
-
 	counter = 0;
 	i = 0;
-
 	if (dstsize <= dst_len)
 		return (dstsize + src_len);
 	while (dst[counter] != '\0')
@@ -64,7 +50,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		dst[counter + i] = src[i];
 		i++;
 	}
-
 	dst[dst_len + i] = '\0';
 	return (dst_len + src_len);
 }
