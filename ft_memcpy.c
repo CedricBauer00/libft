@@ -6,7 +6,7 @@
 /*   By: cbauer < cbauer@student.42heilbronn.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 15:43:43 by cbauer            #+#    #+#             */
-/*   Updated: 2024/10/22 13:04:57 by cbauer           ###   ########.fr       */
+/*   Updated: 2024/10/23 16:48:06 by cbauer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,13 +40,12 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 // 	return (0);
 // }
 
-
 // void	*ft_memcpy(void *dst, const void *src, size_t n)
 // {
 // 	size_t	counter;
 // 	unsigned char	*destination;
 // 	const unsigned char *source;
-	
+
 // 	destination = (unsigned char *)dst;
 // 	source = (const unsigned char *)src;
 // 	counter = 0;

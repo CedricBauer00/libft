@@ -6,7 +6,7 @@
 /*   By: cbauer < cbauer@student.42heilbronn.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 10:01:11 by cbauer            #+#    #+#             */
-/*   Updated: 2024/10/21 17:54:44 by cbauer           ###   ########.fr       */
+/*   Updated: 2024/10/23 16:46:43 by cbauer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@
 static int	ft_countint(int n)
 {
 	int		counter;
-	
+
 	counter = 0;
 	if (n < 0)
 		counter++;
@@ -38,7 +38,6 @@ static int	ft_countint(int n)
 	}
 	return (counter);
 }
-
 
 // static char	*ft_iszero(void)
 // {
@@ -68,7 +67,7 @@ char	*ft_itoa(int n)
 	if (n < 0)
 	{
 		n = -n;
-		intrep[0] = '-';	
+		intrep[0] = '-';
 	}
 	intrep[counter] = '\0';
 	counter--;
@@ -81,7 +80,6 @@ char	*ft_itoa(int n)
 	return (intrep);
 }
 
-
 // #include <stdio.h>
 // #include <unistd.h>
 
@@ -92,4 +90,3 @@ char	*ft_itoa(int n)
 // 	// write(1, str, 8);
 // 	return (0);
 // }
-

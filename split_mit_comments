@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
+/*   split_mit_comments                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbauer < cbauer@student.42heilbronn.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 17:09:41 by cbauer            #+#    #+#             */
-/*   Updated: 2024/10/23 16:37:26 by cbauer           ###   ########.fr       */
+/*   Updated: 2024/10/23 16:32:48 by cbauer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,36 +54,39 @@ static char	**ft_initarray(char const *s, char c, int size, char **doublearray)
 
 	i = 0;
 	start = 0;
-	while (i < size)
+	while (i < size)	//repeat amout of strings often
 	{
-		while (s[start] == c && s[start] != '\0')
+		while (s[start] == c && s[start] != '\0')	//determining where the first word starts
 			start++;
-		len = 0;
-		while (s[start + len] != c && s[start + len] != '\0')
+		len = 0;	//len = for counting length of words (strings)
+		while (s[start + len] != c && s[start + len] != '\0')// counting the word
 			len++;
-		doublearray[i] = ft_substr(s, start, len);
-		if (doublearray[i] == NULL)
+		doublearray[i] = ft_substr(s, start, len);	//initialyzing allocated sting
+		if (doublearray[i] == NULL) // ! Is not check if actually works
 			free_array(doublearray);
-		start = start + len;
+		start = start + len;	//start = end of word
 		i++;
 	}
 	return (doublearray);
 }
+
 
 char	**ft_split(char const *s, char c)
 {
 	int		size;
 	char	**doublearray;
 
-	size = (ft_readstr(s, c) + 1);
+	size = (ft_readstr(s, c) + 1 );
 	if (!s)
 		return (NULL);
-	doublearray = ft_calloc (size, sizeof(char *));
-	if (!doublearray)
+	doublearray = ft_calloc (size, sizeof(char *)); // calloc
+	if (!doublearray)	// protection
 		return (0);
 	ft_initarray(s, c, size - 1, doublearray);
 	return (doublearray);
 }
+
+
 
 // int main()
 // {
@@ -95,3 +98,4 @@ char	**ft_split(char const *s, char c)
 // 	}
 // 	return (0);
 // }
+

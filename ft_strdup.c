@@ -6,7 +6,7 @@
 /*   By: cbauer < cbauer@student.42heilbronn.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 13:58:21 by cbauer            #+#    #+#             */
-/*   Updated: 2024/10/21 17:56:54 by cbauer           ###   ########.fr       */
+/*   Updated: 2024/10/23 16:48:16 by cbauer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,3 @@ char	*ft_strdup(const char *str)
 	ptr[counter] = '\0';
 	return (ptr);
 }
-	

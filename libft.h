@@ -6,7 +6,7 @@
 /*   By: cbauer < cbauer@student.42heilbronn.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 15:16:35 by cbauer            #+#    #+#             */
-/*   Updated: 2024/10/22 14:39:41 by cbauer           ###   ########.fr       */
+/*   Updated: 2024/10/23 16:49:49 by cbauer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@
 # include <stdlib.h>
 # include <string.h>
 
-typedef struct	s_list
+typedef struct s_list
 {
-void		*content;
-struct		s_list *next;
+	void	*content;
+	struct s_list	*next;
 }			t_list;
 
 int		ft_isascii(int c);
@@ -55,5 +55,6 @@ void	ft_putendl_fd(char *s, int fd);
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_itoa(int n);
+char	**ft_split(char const *s, char c);
 
 #endif

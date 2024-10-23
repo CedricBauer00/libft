@@ -1,5 +1,5 @@
 
-CFLAGS	= -Wall -Wextra -Werror
+CFLAGS	= -Wall -Wextra -Werror -g3
 RM = rm -f
 CC = cc
 
@@ -38,11 +38,12 @@ SOURCES =	ft_isascii.c \
 			ft_putendl_fd.c \
 			ft_striteri.c \
 			ft_strmapi.c \
-			ft_itoa.c 
+			ft_itoa.c \
+			ft_split.c
 
 OBJECTS	= ${SOURCES:.c=.o}
 
-%.o : %.c
+%.o : %.c libft.h
 	$(CC) ${CFLAGS} -c $< -o $@
 
 ${NAME}: ${OBJECTS}
@@ -61,3 +62,5 @@ fclean: clean
 
 re: fclean all
 
+debug: $(OBJECTS)
+	$(CC) $(CFLAGS) $^ -o debug
