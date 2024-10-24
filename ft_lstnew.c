@@ -1,33 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbauer < cbauer@student.42heilbronn.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 13:58:21 by cbauer            #+#    #+#             */
-/*   Updated: 2024/10/24 10:37:51 by cbauer           ###   ########.fr       */
+/*   Created: 2024/10/24 12:07:42 by cbauer            #+#    #+#             */
+/*   Updated: 2024/10/24 13:13:16 by cbauer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *str)
+t_list	*ft_lstnew(void *content)
 {
-	size_t	len;
-	size_t	counter;
-	char	*ptr;
-
-	len = ft_strlen(str);
-	ptr = malloc(len * sizeof(char) + 1);
-	if (!ptr)
+	t_list	*node;
+	
+	node = (t_list *)malloc(sizeof(t_list));
+	if (!node)
 		return (NULL);
-	counter = 0;
-	while (str[counter] != '\0')
-	{
-		ptr[counter] = str[counter];
-		counter++;
-	}
-	ptr[counter] = '\0';
-	return (ptr);
+	node->content = content;
+	node->next = NULL;
+	return (node);
+}
+
+int main()
+{
+	ft_lstnew("list1 created\n");
+	
+	return 0;
 }

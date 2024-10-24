@@ -39,7 +39,8 @@ SOURCES =	ft_isascii.c \
 			ft_striteri.c \
 			ft_strmapi.c \
 			ft_itoa.c \
-			ft_split.c
+			ft_split.c \
+			ft_lstnew.c \
 
 OBJECTS	= ${SOURCES:.c=.o}
 
