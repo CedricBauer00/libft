@@ -6,7 +6,7 @@
 /*   By: cbauer < cbauer@student.42heilbronn.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 13:27:24 by cbauer            #+#    #+#             */
-/*   Updated: 2024/10/18 15:01:32 by cbauer           ###   ########.fr       */
+/*   Updated: 2024/10/25 17:06:01 by cbauer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t	i;
 
 	counter = 0;
+	if (needle == NULL || haystack == NULL)
+		return (0);
 	if (needle[0] == '\0')
 	{
 		return ((char *)haystack);

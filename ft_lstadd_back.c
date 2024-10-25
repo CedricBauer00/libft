@@ -1,32 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lastback.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbauer < cbauer@student.42heilbronn.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/24 12:07:42 by cbauer            #+#    #+#             */
-/*   Updated: 2024/10/25 16:46:22 by cbauer           ###   ########.fr       */
+/*   Created: 2024/10/25 10:45:28 by cbauer            #+#    #+#             */
+/*   Updated: 2024/10/25 16:24:54 by cbauer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list	*node;
-	
-	node = (t_list *)malloc(sizeof(t_list));
-	if (!node)
-		return (NULL);
-	node->content = content;
-	node->next = NULL;
-	return (node);
-}
+	t_list	*lastnode;
 
-// int main()
-// {
-// 	ft_lstnew("list1 created\n");
-	
-// 	return 0;
-// }
+	if (new == NULL)
+		return ;
+	new->next = NULL;
+	if (*lst == NULL)
+	{
+		*lst = new;
+		return ;
+	}
+	lastnode = *lst;
+	while (lastnode->next != NULL)
+	{
+		lastnode = lastnode->next;
+	}
+	lastnode->next = new;
+}

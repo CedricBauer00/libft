@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbauer < cbauer@student.42heilbronn.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/24 12:07:42 by cbauer            #+#    #+#             */
-/*   Updated: 2024/10/25 16:46:22 by cbauer           ###   ########.fr       */
+/*   Created: 2024/10/25 12:48:27 by cbauer            #+#    #+#             */
+/*   Updated: 2024/10/25 13:00:21 by cbauer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	t_list	*node;
-	
-	node = (t_list *)malloc(sizeof(t_list));
-	if (!node)
-		return (NULL);
-	node->content = content;
-	node->next = NULL;
-	return (node);
+	if (lst == NULL)
+		return ;
+	if (f == NULL)
+		return ;
+	while (lst != NULL) //not lst->next, which would exclude the last node
+	{
+		f((void *)lst->content);
+		lst = lst->next;
+	}
 }
-
-// int main()
-// {
-// 	ft_lstnew("list1 created\n");
-	
-// 	return 0;
-// }

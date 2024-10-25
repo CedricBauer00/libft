@@ -1,32 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbauer < cbauer@student.42heilbronn.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/24 12:07:42 by cbauer            #+#    #+#             */
-/*   Updated: 2024/10/25 16:46:22 by cbauer           ###   ########.fr       */
+/*   Created: 2024/10/25 12:00:28 by cbauer            #+#    #+#             */
+/*   Updated: 2024/10/25 12:18:58 by cbauer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	t_list	*node;
+	if (lst == NULL)
+		return ;	
 	
-	node = (t_list *)malloc(sizeof(t_list));
-	if (!node)
-		return (NULL);
-	node->content = content;
-	node->next = NULL;
-	return (node);
+	del((void *)lst->content);
+	free(lst);
 }
-
-// int main()
-// {
-// 	ft_lstnew("list1 created\n");
-	
-// 	return 0;
-// }
