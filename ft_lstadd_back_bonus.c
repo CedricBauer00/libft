@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lastback.c                                      :+:      :+:    :+:   */
+/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbauer < cbauer@student.42heilbronn.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 10:45:28 by cbauer            #+#    #+#             */
-/*   Updated: 2024/10/25 16:24:54 by cbauer           ###   ########.fr       */
+/*   Updated: 2024/10/26 13:59:11 by cbauer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,15 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 
 	if (new == NULL)
 		return ;
-	new->next = NULL;
 	if (*lst == NULL)
-	{
 		*lst = new;
-		return ;
-	}
-	lastnode = *lst;
-	while (lastnode->next != NULL)
+	else
 	{
-		lastnode = lastnode->next;
+		lastnode = *lst;
+		while (lastnode->next != NULL)
+		{
+			lastnode = lastnode->next;
+		}
+		lastnode->next = new;
 	}
-	lastnode->next = new;
 }
